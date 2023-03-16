@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .mytitle {
+            background-color: green;
+            color: white;
+
+            height: 250px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg');
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .mytitle>button {
+            width: 250px;
+            height: 50px;
+
+            background-color: transparent;
+
+            border: 1px solid white;
+            color: white;
+
+            border-radius: 50px;
+
+            margin-top: 20px;
+        }
+
+        .mytitle>button:hover {
+            border: 2px solid white;
+        }
+
+        .mycomment {
+            color: gray;
+        }
+
+        .mycard {
+            width: 1200px;
+            margin: 20px auto 20px auto;
+        }
+
+        .mypost {
+            width: 500px;
+            margin: 20px auto 20px auto;
+            padding: 20px 20px 20px 20px;
+
+            box-shadow: 0px 0px 3px 0px grey;
+        }
+
+        .mybtn {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 20px;
+        }
+
+        .mybtn>button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mytitle">
+        <h1> 한나랑 같이 본 영화들</h1>
+        <button> 영화 기록하기 </button>
+    </div>
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">영화 URL</label>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea"> 줄거리 </label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">별점</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea"> 코멘트 </label>
+        </div>
+        <div class="mybtn">
+            <button type="button" class="btn btn-dark">기록하기</button>
+            <button type="button" class="btn btn-outline-dark">닫기</button>
+        </div>
+    </div>
+
+    <div class="mycards">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+            <div class="col">
+                <div class="card">
+                    <img src="https://movie-phinf.pstatic.net/20171218_47/1513561221134wvRja_JPEG/movie_image.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">위대한 쇼맨</h5>
+                        <p class="card-text">쇼 비즈니스의 창시자이자, 꿈의 무대로 전세계를 매료시킨 남자
+                            ‘바넘’의 이야기에서 영감을 받아 탄생한 오리지널 뮤지컬 영화 <위대한 쇼맨>.
+                        </p>
+                        <P> 별점: ⭐⭐⭐⭐⭐</P>
+                        <p class="mycomment"> 코멘트: 한나랑 대전에서 같이본 첫번째 영화! 코로나로 인해 재개봉해서 재밌게 봄 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://movie-phinf.pstatic.net/20220607_129/16545872892918GA4h_JPEG/movie_image.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">헤어질 결심</h5>
+                        <p class="card-text">진심을 숨기는 용의자 용의자에게 의심과 관심을 동시에 느끼는 형사 그들의 <헤어질 결심>
+                        </p>
+                        <P> 별점: ⭐⭐⭐</P>
+                        <p class="mycomment"> 코멘트: 한나랑 사귀기전에 영화관에서 같이 봄. 조금 다크했지만... 볼만은 했음 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://movie-phinf.pstatic.net/20111222_128/1324551257240i2tXP_JPEG/movie_image.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">패밀리 맨</h5>
+                        <p class="card-text">빛나는 성공과 사랑하는 가족사이에서 선택의 기로에 서게 되는 한 남자의 이야기.</p>
+                        <P> 별점: ⭐⭐⭐⭐⭐</P>
+                        <p class="mycomment"> 코멘트: 한나랑 세종 조치원 카페에서 아이패드로 70퍼보고 한나 집 앞 빙수집에서 나머지 봄! 재밌었습니다. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://movie-phinf.pstatic.net/20220920_244/1663641181915y0nJN_JPEG/movie_image.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">아바타1</h5>
+                        <p class="card-text">인류의 마지막 희망, 행성 판도라!
+                            이곳을 정복하기 위한 ‘아바타 프로젝트’가 시작된다!</p>
+                        <P> 별점: ⭐⭐⭐⭐⭐</P>
+                        <p class="mycomment"> 코멘트: 나의 최애영화중 하나인 아바타1. 아바타2 개봉하기전이라 한나랑 아바타1 같이보고 아바타2 같이 볼라고 문경에서 같이 봄!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://movie-phinf.pstatic.net/20221213_158/1670910727328mpqYu_JPEG/movie_image.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">영웅</h5>
+                        <p class="card-text">누가 죄인인가, 누가 영웅인가!
+                        </p>
+                        <P> 별점: ⭐⭐⭐⭐</P>
+                        <p class="mycomment"> 코멘트: 올림픽대로 체육관에서 본 영화! 날씨가 추웠던 걸로 기억하고 오래걸었었지. 뮤지컬영화는 항상 좋아서 재밌게 봄 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://movie-phinf.pstatic.net/20230127_10/1674797200626zHNcU_JPEG/movie_image.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">스마트폰을 떨어뜨렸을 뿐인데</h5>
+                        <p class="card-text">단지, 스마트폰을 떨어뜨렸을 뿐인데
+                            내 모든 일상이 무너진다!</p>
+                        <P> 별점: ⭐⭐⭐⭐</P>
+                        <p class="mycomment"> 코멘트: 마포 신라스테이에서 같이 본 한나한테만 무서웠던 영화! 볼만 했음! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
